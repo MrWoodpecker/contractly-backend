@@ -18,9 +18,9 @@ const getKey: jwt.GetPublicKeyOrSecret = (header, callback) => {
 
     client.getSigningKey(header.kid, (error, key) => {
 
-      const signingKey = 'publicKey' in key ? key.publicKey : key.rsaPublicKey;
+        const signingKey = 'publicKey' in key ? key.publicKey : key.rsaPublicKey;
 
-      callback(null, signingKey);
+        callback(null, signingKey);
 
     });
 
